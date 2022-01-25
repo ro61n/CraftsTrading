@@ -1,0 +1,31 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <br/>
+    <h1 class="display-4">Welcome to Craft Traders</h1>
+    <p>This project demonstrates infomration read from a JSON file as objects using a C# class. These objects are then displayed using Razor code.</p>
+    <br/>
+</div>
+
+<div class="card-columns" >
+    @foreach(var product in Model.Products)
+    {
+        <div class="card" >
+            <div class="card-img" style="background-image: url('@product.Image'); height:100px; "></div>
+            <div class="card-body">
+                <h5 class="card-title" >@product.Title</h5>
+            </div>
+            
+        </div>
+        
+    }
+</div>
+
+<div class="text-center">
+    <p>This project was built from a tutorial.</p>
+    <p>References: <a target="_blank" href="https://docs.microsoft.com/en-us/shows/ASPNET-Core-101/?WT.mc_id=Educationaspnet-c9-niner">View ASP.NET tutorial</a></p>
+</div>
